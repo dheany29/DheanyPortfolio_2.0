@@ -1,12 +1,13 @@
 import {
+  Github,
   Instagram,
   Linkedin,
+  Facebook,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitch,
-  Twitter,
+  
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -54,12 +55,12 @@ export const ContactSection = () => {
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Email</h4>
+                  <h4 className="font-medium mt-3">dheanylyn29@gmail.com</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:dheanylyn29@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                   
                   </a>
                 </div>
               </div>
@@ -68,12 +69,12 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium mt-3">+63 9100 477 461</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="cel:+63 9100 477 461"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    
                   </a>
                 </div>
               </div>
@@ -82,9 +83,9 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
+                  <h4 className="font-medium mt-3"></h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                    Mansaya-Lapuz, Iloilo City
                   </a>
                 </div>
               </div>
@@ -96,14 +97,15 @@ export const ContactSection = () => {
                 <a href="#" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
+                <a href="https://www.facebook.com/dhniclr.jereza" target="_blank">
+                  <Facebook />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/dhniclr" target="_blank">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitch />
+                
+                <a href="https://github.com/" target="_blank">
+                  <Github />
                 </a>
               </div>
             </div>
@@ -122,7 +124,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Name
+                  Name
                 </label>
                 <input
                   type="text"
@@ -130,7 +132,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder=""
                 />
               </div>
 
@@ -140,7 +142,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Email
+                  Email
                 </label>
                 <input
                   type="email"
@@ -148,7 +150,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder=""
                 />
               </div>
 
@@ -158,7 +160,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Message
+                  Message
                 </label>
                 <textarea
                   id="message"

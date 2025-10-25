@@ -1,13 +1,27 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
-
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
+    // Detect if dark mode is active
+    const checkDarkMode = () => {
+      const dark = document.documentElement.classList.contains("dark");
+      setIsDarkMode(dark);
+    };
+
+    // Initial check
+    checkDarkMode();
+
+    // Watch for theme changes (if using a theme toggle)
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
     generateStars();
     generateMeteors();
 
@@ -17,7 +31,10 @@ export const StarBackground = () => {
 
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      observer.disconnect();
+    };
   }, []);
 
   const generateStars = () => {
@@ -76,20 +93,22 @@ export const StarBackground = () => {
         />
       ))}
 
-      {meteors.map((meteor) => (
-        <div
-          key={meteor.id}
-          className="meteor animate-meteor"
-          style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
-          }}
-        />
-      ))}
+      {/* Only show meteors in dark mode */}
+      {isDarkMode &&
+        meteors.map((meteor) => (
+          <div
+            key={meteor.id}
+            className="meteor animate-meteor"
+            style={{
+              width: meteor.size * 50 + "px",
+              height: meteor.size * 2 + "px",
+              left: meteor.x + "%",
+              top: meteor.y + "%",
+              animationDelay: meteor.delay + "s",
+              animationDuration: meteor.animationDuration + "s",
+            }}
+          />
+        ))}
     </div>
   );
 };
