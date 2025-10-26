@@ -10,7 +10,7 @@ export const HeroSection = () => {
         {/* === Image Section === */}
         <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg border-4 border-primary animate-float">
           <img
-            src="src/assets/image.png"
+            src="public/image.png"
             alt="Dheany Lyn Claire Jereza"
             className="object-cover w-full h-full"
           />
