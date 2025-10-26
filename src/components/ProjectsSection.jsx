@@ -1,17 +1,26 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
+{
+id: 1,
+    title: "mapaWIT",
+    description: "A campus navigation web app with an 2D interavtice map.",
+    image: "/projects/mapawit.png",
+    tags: ["MappedIN", "Express", "React", "Node"],
+    demoUrl: "#",
+    githubUrl: "#",
+   },
   {
-    id: 1,
+    id: 2,
     title: "My Portfolio",
-    description: "It highlights my work in HTML, CSS, JavaScript, and various frameworks, demonstrating my ability to create responsive and user-friendly designs",
+    description: "It highlights my work in HTML, CSS, JavaScript, and various frameworks, demonstrating my ability to create responsive and user-friendly designs.",
     image: "/projects/project1.png",
     tags: ["React", "TailwindCSS", "Vite"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
-    id: 2,
+    id: 3,
     title: "AWESOME TODOS",
     description:
       "It allows users to add, edit, and delete tasks.",
@@ -21,8 +30,8 @@ const projects = [
     githubUrl: "#",
   },
   {
-    id: 3,
-    title: "mapaWIT",
+    id: 4,
+    title: "mapaWIT2.0",
     description:
       "A campus navigation that helps you find classroms, offices, and facilities.",
     image: "/projects/project3.png",
@@ -30,6 +39,15 @@ const projects = [
     demoUrl: "#",
     githubUrl: "#",
   },
+   {
+    id: 5,
+    title: "Ruztaurant",
+    description: "A restaurant management and reservation website designed to enhance dining experiences.",
+    image: "/projects/Ruztaurant.png",
+    tags: ["HTML", "CSS", "JavaScript", "PHP"],
+    demoUrl: "#",
+    githubUrl: "#",
+   },
 ];
 
 export const ProjectsSection = () => {
